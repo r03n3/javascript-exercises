@@ -1,7 +1,5 @@
 const reverseString = function(text) {
-    reverseWordArr = text.split ("");
-    let mapReverse = reverseWordArr.map(word => word.split("").reverse().join(""));
-    return mapReverse;
+    return text.split("").reverse().join("");
 };
 
 // Do not edit below this line
