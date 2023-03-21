@@ -9,25 +9,29 @@ const subtract = function(number1, number2) {
 };
 
 const sum = function(numArr) {
-	let result = numArr.forEach(element => {
-    sum+=element;
-  });
+  let result=0;
+  numArr.forEach(element => console.log(element));
+  for(let i =0; i<numArr.length; i++){
+    result += numArr[i];
+  }
+  return result;
 };
 
 const multiply = function(numArr) {
   let result=1;
   for(let i =0; i<numArr.length; i++){
-    result *= numArr[i];
+    result *= Number(numArr[i]);
   }
+  return result;
 };
 
 const power = function(number, exponent) {
 	let result=number;
-  if(exponent=0){
+  if(exponent==0){
     result==1;
   }
   else{
-    for (let i=0; i<exponent; i++){
+    for (let i=0; i<(exponent-1); i++){
       result*=number;
     }
   }  
@@ -43,7 +47,8 @@ const factorial = function(factor) {
     for(let i=1; i<=factor; i++){
       result *= i;  
     }
-  }	
+  }
+  return result;	
 };
 
 // Do not edit below this line
